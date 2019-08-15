@@ -1,7 +1,7 @@
 class Mover {
   constructor(x, y, mass) {
 
-
+    this.theta = 0.0;
     this.angle = 0;
     this.aAcceleration = 0.01;
     this.aVelocity = 0;
@@ -19,7 +19,6 @@ class Mover {
   }
 
   update() {
-
 //Angluar motion snippit---------------------
     //this.aAcceleration = this.acceleration.x/10.0; //changes acceleration due to xvalue
 
@@ -36,6 +35,7 @@ class Mover {
   }
 
   display() {
+    this.theta += 0.02;
     stroke(0);
     fill(175, 200);
 
@@ -44,7 +44,7 @@ class Mover {
     translate(this.position.x, this.position.y);
     rotate(this.angle);
     rect(0, 0, this.radius * 3, this.radius * 3);
-    line(0, 0, this.radius, 0);
+    line(0, 0, (this.aAcceleration*sin(this.theta)*2003), 0);
     pop();//end new drawing state
   }
 }
