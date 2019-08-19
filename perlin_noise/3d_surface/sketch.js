@@ -3,8 +3,8 @@
  * @Date:   2019-08-16T10:34:56-05:00
  * @Email:  as305218@ohio.edu
  * @Filename: sketch.js
- * @Last modified by:   Alex Shelton
- * @Last modified time: 2019-08-16T11:53:08-05:00
+ * @Last modified by:   zoso
+ * @Last modified time: 2019-08-18T16:16:55-05:00
  */
 
 var cols, rows;
@@ -18,13 +18,20 @@ var terrain = [];
 let flightSpeed;
 
 
-let myFont;
+
+
 
 
 function setup() {
-  createCanvas(600, 600,WEBGL); //WEBGL needed for x-Axis rotation
+
+
+
+  createCanvas(600, 600,WEBGL); //WEBGL needed for x-Axis rotationvar p5canvas
+
   cols = floor(w / scl);
   rows = floor(h/ scl);
+
+
 
 
   //creating an empty 2d vector for each vertex of traingular strip
@@ -76,4 +83,6 @@ function draw() {
     }
     endShape();
   }
+
+
 }
